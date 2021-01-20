@@ -17,3 +17,14 @@
 // views - количество просмотров
 // comments - количество комментариев
 // downloads - количество загрузок
+
+const apiKey = "19951456-e393dc841832362ddd9551c23";
+const url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&per_page=12&key=${apiKey}`;
+
+async function apiService(searchQuery, page) {
+    return fetch(`${url}&q=${encodeURIComponent(searchQuery)}&page=${page}`,
+    ).then(response => response.json())
+        .then(data => data.hits)
+}
+
+export default apiService;
