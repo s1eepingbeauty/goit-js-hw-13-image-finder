@@ -10,8 +10,10 @@ function updateMarkup(images) {
         if (images.length > 0) {
             markup = imageCard(images);
             refs.loadMoreBtn.hidden = false;
+            refs.returnBtn.hidden = false;
         } else {
             refs.loadMoreBtn.hidden = true;
+            refs.returnBtn.hidden = true;
             error({
                 title: 'Image not found!',
                 hide: true,
