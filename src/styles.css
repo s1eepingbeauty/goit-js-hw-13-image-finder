@@ -1,8 +1,3 @@
-:root {
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-duration: 250ms;
-}
-
 html {
   box-sizing: border-box;
 }
@@ -19,46 +14,11 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   background-color: black;
+  font-size: 14px;
 }
 
 ul {
   list-style: none;
-}
-.gallery {
-  padding: 30px;
-  transition: all cubic-bezier(0.42, 0, 0.58, 1);
-}
-.gallery-item {
-  width: 350px;
-  height: 350px;
-  border: 1px dotted rgb(27, 71, 71);
-  border-radius: 4px;
-  margin-bottom: 20px;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
-}
-.gallery-item:hover {
-  transform: scale(1.03);
-}
-.search-form {
-  text-align: center;
-  margin-top: 30px;
-}
-.stats {
-  display: flex;
-  justify-content: space-evenly;
-  color: lightgrey;
-  height: 50px;
-  font-size: 14px;
-}
-.stats-item {
-  display: flex;
-  align-items: center;
-  align-content: center;
-}
-
-.stats-item i {
-  margin-right: 5px;
 }
 
 .wrap {
@@ -67,12 +27,101 @@ ul {
   justify-content: space-between;
 }
 
+.gallery {
+  padding: 30px;
+  padding-bottom: 0;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gallery-item {
+  width: 350px;
+  height: 350px;
+  border: 1px dotted rgb(19, 32, 32);
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.gallery-item:hover {
+  transform: scale(1.01);
+  border: 1px dotted rgb(55, 92, 92);
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.search-form-input {
+  padding-left: 10px;
+  height: 30px;
+  font-size: 14px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.search-form-btn {
+  width: 60px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
 .photo-card {
   width: 100%;
   height: 300px;
 }
-
 .photo-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  color: lightgrey;
+  height: 50px;
+}
+.stats-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.stats-item i {
+  margin-right: 5px;
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.load-more-btn {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.basicLightbox {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0.01;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+  will-change: opacity;
+}
+
+.basicLightbox--visible {
+  opacity: 1;
+}
+
+.basicLightbox img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;

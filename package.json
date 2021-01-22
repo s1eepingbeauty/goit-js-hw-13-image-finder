@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@pnotify/core": "^5.2.0",
+    "basiclightbox": "^5.0.4",
     "core-js": "^3.6.5",
     "handlebars": "^4.7.6"
   }
